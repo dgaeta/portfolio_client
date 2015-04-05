@@ -19,4 +19,28 @@ angular.module('demoServices', [])
             }
         }
     })
+    .factory('Chess10', function($http, $window) {      
+        return {
+            get : function() {
+                var baseUrl = $window.sessionStorage.baseurl;
+                return $http.get(baseUrl+'/api/chess10');
+            }
+        }
+    })
+    .factory('Chess11', function($http, $window) {      
+        return {
+            get : function() {
+                var baseUrl = $window.sessionStorage.baseurl;
+                return $http.get(baseUrl+'/api/chess11');
+            }
+        }
+    })
+    .factory('Chess10Comments', function($http, $window) {      
+        return {
+            get : function() {
+                var baseUrl = $window.sessionStorage.baseurl;
+                return $http.get(baseUrl+'/api/chess10Comments');
+            }
+        }
+    })
     ;
