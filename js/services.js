@@ -23,7 +23,7 @@ angular.module('demoServices', [])
         return {
             get : function() {
                 var baseUrl = $window.sessionStorage.baseurl;
-                return $http.get(baseUrl+'/api/chess10');
+                return $http.get('http://localhost:4000/api/chess10');
             }
         }
     })
@@ -31,15 +31,31 @@ angular.module('demoServices', [])
         return {
             get : function() {
                 var baseUrl = $window.sessionStorage.baseurl;
-                return $http.get(baseUrl+'/api/chess11');
+                return $http.get('http://localhost:4000/api/chess11');
             }
         }
     })
-    .factory('Chess10Comments', function($http, $window) {      
+    .factory('Chess12', function($http, $window) {      
         return {
             get : function() {
                 var baseUrl = $window.sessionStorage.baseurl;
-                return $http.get(baseUrl+'/api/chess10Comments');
+                return $http.get('http://localhost:4000/api/chess12');
+            }
+        }
+    })
+    .factory('Csair20', function($http, $window) {      
+        return {
+            get : function() {
+                var baseUrl = $window.sessionStorage.baseurl;
+                return $http.get('http://localhost:4000/api/Csair20');
+            }
+        }
+    })
+    .factory('Csair21', function($http, $window) {      
+        return {
+            get : function() {
+                var baseUrl = $window.sessionStorage.baseurl;
+                return $http.get('http://localhost:4000/api/csair21');
             }
         }
     })
