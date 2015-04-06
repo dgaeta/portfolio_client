@@ -1,0 +1,97 @@
+<div class="list" ng-controller='Chess10Controller'>    
+   <div class="row">
+        <div class="large-12 columns">
+          <h1>Chess 1.2 <small></small></h1>
+          <hr/>
+        </div>
+    </div>
+     
+       
+     
+     
+       
+     
+<div class="row">
+
+   
+  <div class="large-9 columns" role="content">
+    <article>
+      <h3><a href="#">File name</a></h3>
+      <div class="row">
+      <div class="large-6 columns">
+        <table style="width:100%">
+          <tr>
+            <td>File</td>
+            <td>Path</td>   
+            <td>Size</td>
+            <td>Author</td>
+            <td>Revision</td>
+          </tr>
+          <tr>
+            <td>Bishop.java</td>
+            <td>subversion/gaeta2/Bishop.java</td>    
+            <td>984</td>
+            <td>gaeta2</td>
+            <td>4753</td>
+          </tr>
+        </table>
+      </div>
+        <div class="large-12 columns">
+          <iframe  height="500px" width="100%" src="{{iframe_url}}">
+            <p>Your browser does not support iframes.</p>
+          </iframe>
+
+          
+          <script type="text/ng-template"  id="tree_item_renderer.html"   >
+            {{data.name}}
+            {{data.comment}}
+            <form>
+                Your name:<br>
+                <input type="text" ng-model="$parent.data.yourname">
+                <br>
+                Comment:<br>
+                <input type="text" ng-model="$parent.data.newcomment">
+            </form>
+            <button ng-click="add(data)">Add Comment</button>
+            <button ng-click="delete(data)" ng-show="data.nodes.length > 0">Delete Comments</button>
+            <ul>
+                <li ng-repeat="data in data.nodes" ng-include="'tree_item_renderer.html'"></li>
+            </ul>
+        </script>
+
+        <ul ng-app="Application" ng-controller="TreeController">
+            
+            <li ng-repeat="data in tree" ng-include="'tree_item_renderer.html'" ng-controller="FormController"></li>
+            
+        </ul>
+
+        </div>
+      </div>
+    </article>
+    <hr/>
+  </div>
+
+   
+
+
+   
+
+  <aside class="large-3 columns">
+
+    <h5>Files</h5>
+    <ul class="side-nav">
+      <li ng-repeat="file in jsonData" >
+        <a ng-click="changeFileName(file.name[0])">{{file.name[0] | chess10Filter}}</a>
+      </li>
+    </ul>
+
+    <div class="panel">
+      <h5>Project Description</h5>
+      <p>Feb-2015 <br>This project fulfilled the task of developing the 'Model' component of the MVC project architechture for a Chess program.</p>
+    </div>
+
+    </aside> 
+
+
+  </div>
+</div>

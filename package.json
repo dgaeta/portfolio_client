@@ -15,7 +15,6 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-copy": "^0.1.0",
     "grunt-express-server": "^0.4.19",
-    "matchdep": "~0.1.2", 
-    "mongoose": "^3.8.24"
+    "matchdep": "~0.1.2"
   }
 }

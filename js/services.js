@@ -19,8 +19,6 @@ angular.module('demoServices', [])
             }
         }
     })
-<<<<<<< HEAD
-<<<<<<< HEAD
     .factory('Chess10', function($http, $window) {      
         return {
             get : function() {
@@ -37,9 +35,12 @@ angular.module('demoServices', [])
             }
         }
     })
-=======
->>>>>>> parent of 126b702... updated v 2
-=======
->>>>>>> parent of 126b702... updated v 2
+    .factory('Chess10Comments', function($http, $window) {      
+        return {
+            get : function() {
+                var baseUrl = $window.sessionStorage.baseurl;
+                return $http.get(baseUrl+'/api/chess10Comments');
+            }
+        }
+    })
     ;
-
