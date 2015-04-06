@@ -35,12 +35,4 @@ angular.module('demoServices', [])
             }
         }
     })
-    .factory('Chess10Comments', function($http, $window) {      
-        return {
-            get : function() {
-                var baseUrl = $window.sessionStorage.baseurl;
-                return $http.get(baseUrl+'/api/chess10Comments');
-            }
-        }
-    })
     ;
