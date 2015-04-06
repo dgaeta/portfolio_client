@@ -1,6 +1,6 @@
 // var demoApp = angular.module('demoApp', ['demoControllers']);
 
-var demoApp = angular.module('demoApp', ['ngRoute', 'demoControllers', 'demoServices', 'portfolioFilters']);
+var demoApp = angular.module('demoApp', ['ngRoute', 'demoControllers', 'demoServices']);
 
 demoApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider.
@@ -20,27 +20,7 @@ demoApp.config(['$routeProvider', function($routeProvider) {
     templateUrl: 'partials/llamalist.html',
     controller: 'LlamaListController'
   }).
-  when('/chess10', {
-    templateUrl: 'partials/chess10.html',
-    controller: 'Chess10Controller'
-  }).
-  when('/chess11', {
-    templateUrl: 'partials/chess11.html',
-    controller: 'Chess11Controller'
-  }).
-  when('/chess12', {
-    templateUrl: 'partials/chess12.html',
-    controller: 'Chess12Controller'
-  }).
-  when('/csair20', {
-    templateUrl: 'partials/csair20.html',
-    controller: 'Chess10Controller'
-  }).
-  when('/home', {
-    templateUrl: 'partials/home.html',
-    controller: 'HomeController'
-  }).
   otherwise({
-    redirectTo: '/home'
+    redirectTo: '/settings'
   });
 }]);
