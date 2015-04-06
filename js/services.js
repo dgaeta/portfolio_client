@@ -19,6 +19,7 @@ angular.module('demoServices', [])
             }
         }
     })
+<<<<<<< HEAD
     .factory('Chess10', function($http, $window) {      
         return {
             get : function() {
@@ -35,5 +36,7 @@ angular.module('demoServices', [])
             }
         }
     })
+=======
+>>>>>>> parent of 126b702... updated v 2
     ;
 
